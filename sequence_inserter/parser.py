@@ -61,7 +61,7 @@ class Parser(object):
         sample = sample_str.replace(";", ",").split(",")
 
         options = self.getOptions(params[3:])
-        separator = options.get('sep', DEFAULT_SEPARATOR)
+        separator = options.get('sep', unicode(DEFAULT_SEPARATOR))
         stype, orig_col, ident = self.getSource(ident, sample_str, separator)
 
         rng = None
